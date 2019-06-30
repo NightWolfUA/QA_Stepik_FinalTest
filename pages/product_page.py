@@ -33,3 +33,11 @@ class ProductPage(BasePage):
             assert product_price.text == basket_price.text, "Prices are not equal"
         except TimeoutException:
             assert False, "There is no message with basket price after add to cart"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def should_disappeare_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should be disappeared"

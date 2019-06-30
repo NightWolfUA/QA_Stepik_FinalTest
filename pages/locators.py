@@ -16,5 +16,7 @@ class ProductPageLocators(object):
     BASKET_PRICE = (By.CSS_SELECTOR, "div.basket-mini")
     PRODUCT_NAME = (By.CSS_SELECTOR, "div.product_main h1")
     MESSAGE_BLOCK_PRODUCT_NAME = (By.CSS_SELECTOR, "#messages .alert-success > .alertinner > strong")
+    SUCCESS_MESSAGE = (By.XPATH, "//*[@id='messages']/div[contains(@class,'alert-success')]/div[contains("
+                                            "string(),'has been added to your basket.')]")
     MESSAGE_BLOCK_BASKET_PRICE = (By.CSS_SELECTOR, "#messages .alert-info > .alertinner > p strong")
 
