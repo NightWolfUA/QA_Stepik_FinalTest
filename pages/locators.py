@@ -20,3 +20,7 @@ class ProductPageLocators(object):
                                             "string(),'has been added to your basket.')]")
     MESSAGE_BLOCK_BASKET_PRICE = (By.CSS_SELECTOR, "#messages .alert-info > .alertinner > p strong")
 
+
+class BasePageLocators(object):
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
