@@ -6,6 +6,7 @@ from selenium.webdriver.support.wait import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from .locators import BasePageLocators
 
+
 class BasePage(object):
     def __init__(self, browser, url, timeout=10):
         self.browser = browser
@@ -63,3 +64,7 @@ class BasePage(object):
 
     def should_be_cart_link(self):
         assert self.is_element_present(*BasePageLocators.CART_LINK), "Cart link is not presented"
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
